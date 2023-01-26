@@ -1,0 +1,10 @@
+S
+S a
+S aA
+S BB
+S C
+A aB
+A
+B Aa
+C cCD
+D ddd
