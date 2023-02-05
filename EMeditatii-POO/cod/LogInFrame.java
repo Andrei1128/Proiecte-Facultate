@@ -79,8 +79,8 @@ public class LogInFrame extends JFrame implements ScriereCitire {
                     l3.setVisible(true);
                     return;
                 }
-                Profil p = (Profil) citire(cale);
-                if (!p.getCont().compareTo(pw.getPassword()))
+                Cont p = (Cont) citire(cale);
+                if (!p.compareTo(pw.getPassword()))
                     l4.setVisible(true);
                 else {
                     dispose();

@@ -8,11 +8,11 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
 public class ModificaProfesorFrame extends ModificaProfilFrame {
-    private Profil p;
+    private Cont p;
     private JButton adaugaCert;
     private String s2;
 
-    public ModificaProfesorFrame(Profil p, MainFrame m) {
+    public ModificaProfesorFrame(Cont p, MainFrame m) {
         super(p, m);
         adaugaCert = new JButton("Adauga Certificat");
         adauga.add(adaugaCert);
@@ -36,10 +36,10 @@ public class ModificaProfesorFrame extends ModificaProfilFrame {
                         Path path = Paths.get("altele\\materii");
                         List<String> lines = Files.readAllLines(path);
                         if (lines.get(index).equals(""))
-                            lines.set(index, p.getCont().getId() + "," + p.getPersoana().toString());
+                            lines.set(index, p.getId() + "," + p.getPersoana().toString());
                         else
                             lines.set(index,
-                                    lines.get(index) + "," + p.getCont().getId() + "," + p.getPersoana().toString());
+                                    lines.get(index) + "," + p.getId() + "," + p.getPersoana().toString());
                         Files.write(path, lines);
                     } catch (Exception i) {
                         i.printStackTrace();

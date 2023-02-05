@@ -6,7 +6,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class AcordaReviewFrame extends JFrame implements ScriereCitire {
-    public JButton submit, cancel;
+    private JButton submit, cancel;
     private JTextArea descriere;
     private JTextField nota;
     private JRadioButton da, nu;

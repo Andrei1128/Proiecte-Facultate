@@ -20,14 +20,14 @@ public class ModificaProfilFrame extends JFrame implements ScriereCitire {
     private BufferedImage newImage;
     private String id;
     private JFileChooser j;
-    private Profil p;
+    private Cont p;
     private Persoana c;
 
-    ModificaProfilFrame(Profil p, MainFrame m) {
+    ModificaProfilFrame(Cont p, MainFrame m) {
         super("Modifica Profil");
         this.p = p;
         c = p.getPersoana();
-        id = p.getCont().getId();
+        id = p.getId();
         this.m = m;
         submit = new JButton("Salveaza");
         cancel = new JButton("Inapoi");

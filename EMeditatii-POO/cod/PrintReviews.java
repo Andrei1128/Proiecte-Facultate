@@ -4,7 +4,7 @@ import java.awt.Graphics;
 import java.awt.print.*;
 import java.util.ArrayList;
 
-public class PrintReviewsFrame implements ScriereCitire {
+public class PrintReviews implements ScriereCitire {
     private final String path = "conturi\\id\\recenzii";
     public void printList(String id) {
         PrinterJob job = PrinterJob.getPrinterJob();

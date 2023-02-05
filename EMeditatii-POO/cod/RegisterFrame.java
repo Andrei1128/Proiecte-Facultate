@@ -132,7 +132,7 @@ public class RegisterFrame extends JFrame implements ScriereCitire {
             return false;
         }
 
-        public void submitSucces(Profil p) {
+        public void submitSucces(Cont p) {
             scrie(p);
             dispose();
             new LogInFrame();
@@ -153,12 +153,10 @@ public class RegisterFrame extends JFrame implements ScriereCitire {
             else if (pwNotMatch())
                 e2.setVisible(true);
             else if (profesor.isSelected()) {
-                Profil p = new Profil(new Profesor(nume.getText(), prenume.getText()),
-                        new Cont(numeUtilizator.getText(), parola.getPassword()));
+                Cont p = new Cont(new Profesor(nume.getText(), prenume.getText()), numeUtilizator.getText(), parola.getPassword());
                 submitSucces(p);
             } else {
-                Profil p = new Profil(new Persoana(nume.getText(), prenume.getText()),
-                        new Cont(numeUtilizator.getText(), parola.getPassword()));
+                Cont p = new Cont(new Persoana(nume.getText(), prenume.getText()), numeUtilizator.getText(), parola.getPassword());
                 submitSucces(p);
             }
         }

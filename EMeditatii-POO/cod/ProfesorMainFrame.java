@@ -11,9 +11,9 @@ public class ProfesorMainFrame extends MainFrame {
     private JFrame vezi;
     private String id;
 
-    ProfesorMainFrame(Profil p) {
+    ProfesorMainFrame(Cont p) {
         super(p);
-        id = p.getCont().getId();
+        id = p.getId();
         jrecenzii = new JMenu("Recenzii");
         printeaza = new JMenuItem("Printeaza Recenzii");
         veziRecenzii = new JMenuItem("Vezi Recenzii");
@@ -33,7 +33,7 @@ public class ProfesorMainFrame extends MainFrame {
                     vezi = new VeziReviewFrame(id);
                 vezi.toFront();
             } else if (e.getSource() == printeaza) {
-                var a = new PrintReviewsFrame();
+                var a = new PrintReviews();
                 a.printList(id);
             } else if (e.getSource() == logOut) {
                 if (vezi != null)

@@ -6,9 +6,9 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 public interface ScriereCitire {
-    default void scrie(Profil p) {
+    default void scrie(Cont p) {
         StringBuilder sb = new StringBuilder("conturi\\");
-        sb.append(p.getCont().getId());
+        sb.append(p.getId());
         try {
             if (!new File(sb.toString()).exists()) {
                 Path path = Paths.get(sb.toString());

@@ -11,10 +11,10 @@ public class MainFrame extends JFrame {
     private Persoana persoana;
     private JFrame mesaje, veziprofil, intalniri, modificaFrame;
     protected JMenuBar toolBar;
-    private Profil p;
+    private Cont p;
     private MainFrame main;
 
-    MainFrame(Profil p) {
+    MainFrame(Cont p) {
         super("E-Meditatii");
         this.p = p;
         main = this;
@@ -78,7 +78,7 @@ public class MainFrame extends JFrame {
                 new LogInFrame();
             } else if (e.getSource() == inbox) {
                 if (mesaje == null || !mesaje.isVisible())
-                    mesaje = new InboxFrame(p.getCont().getId(), p.getPersoana().getNumePrenume());
+                    mesaje = new InboxFrame(p.getId(), p.getPersoana().getNumePrenume());
                 mesaje.toFront();
             } else if (e.getSource() == veziProfil) {
                 if (veziprofil == null || !veziprofil.isVisible())
@@ -93,7 +93,7 @@ public class MainFrame extends JFrame {
                 modificaFrame.toFront();
             } else if (e.getSource() == programari) {
                 if (intalniri == null || !intalniri.isVisible())
-                    intalniri = new IntalniriFrame(p.getCont().getId(), p.getPersoana().getNumePrenume());
+                    intalniri = new IntalniriFrame(p.getId(), p.getPersoana().getNumePrenume());
                 intalniri.toFront();
             } else if (e.getSource() == exit)
                 System.exit(0);
