@@ -6,14 +6,10 @@ public class Mesaj implements Serializable, ScriereCitire {
     private String emitator,numeEmitator;
     private Object continut;
 
-    Mesaj(String emitator,String numeEmitator, Object continut) {
+    public Mesaj(String emitator,String numeEmitator, Object continut) {
         this.emitator = emitator;
         this.continut = continut;
         this.numeEmitator=numeEmitator;
-    }
-
-    public void trimite(String receptor) {
-        scrie(receptor, this,0);
     }
 
     public String toString() {

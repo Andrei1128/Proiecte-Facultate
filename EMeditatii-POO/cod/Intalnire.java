@@ -10,7 +10,7 @@ public class Intalnire implements Serializable {
     private SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm"); 
     private boolean reviewed=false;
 
-    Intalnire(String materie, Date data, String locatie, String pret, String elev, String profesor) {
+    public Intalnire(String materie, Date data, String locatie, String pret, String elev, String profesor) {
         this.data = data;
         this.materie = materie;
         this.locatie = locatie;

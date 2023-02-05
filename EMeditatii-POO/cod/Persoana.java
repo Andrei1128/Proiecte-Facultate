@@ -9,7 +9,7 @@ public class Persoana implements Serializable {
     private String prenume;
     private HashSet<String> materii;
 
-    Persoana(String nume, String prenume) {
+    public Persoana(String nume, String prenume) {
         this.nume = nume;
         this.prenume = prenume;
         poza = "altele\\poza.png";
@@ -23,16 +23,6 @@ public class Persoana implements Serializable {
         return materii;
     }
 
-    public String getNume() {
-        return nume;
-    }
-    public String getNumePrenume() {
-        return nume+" "+prenume;
-    }
-
-    public String getPrenume() {
-        return prenume;
-    }
     public void setNume(String nume) {
         this.nume = nume;
     }

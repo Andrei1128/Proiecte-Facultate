@@ -11,7 +11,7 @@ public class ProfesorMainFrame extends MainFrame {
     private JFrame vezi;
     private String id;
 
-    ProfesorMainFrame(Cont p) {
+    public ProfesorMainFrame(Cont p) {
         super(p);
         id = p.getId();
         jrecenzii = new JMenu("Recenzii");

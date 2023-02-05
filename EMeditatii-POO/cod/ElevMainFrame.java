@@ -9,7 +9,7 @@ public class ElevMainFrame extends MainFrame {
     private JFrame prog;
     private Cont p;
 
-    ElevMainFrame(Cont p) {
+    public ElevMainFrame(Cont p) {
         super(p);
         this.p = p;
         programeaza = new JMenuItem("Programeaza");
@@ -26,7 +26,7 @@ public class ElevMainFrame extends MainFrame {
                     prog.dispose();
             } else if (e.getSource() == programeaza) {
                 if (prog == null || !prog.isVisible())
-                    prog = new ProgrameazaFrame(p.getId(), p.getPersoana().getNumePrenume());
+                    prog = new ProgrameazaFrame(p.getId(), p.getPersoana().toString());
                 prog.toFront();
             }
         }

@@ -14,7 +14,7 @@ public class VeziReviewFrame extends JFrame implements ScriereCitire {
     private JScrollPane scrollPane;
     private final String path ="conturi\\id\\recenzii";
 
-    VeziReviewFrame(String id) {
+    public VeziReviewFrame(String id) {
         super("Recenzie");
         lista = ((ArrayList<Recenzie>) citire(path.replace("id", id)));
         modelList = new DefaultListModel<Recenzie>();

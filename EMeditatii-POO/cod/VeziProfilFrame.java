@@ -9,7 +9,8 @@ public class VeziProfilFrame extends JFrame implements ScriereCitire {
 
     public VeziProfilFrame(Persoana c) {
         super("Informatii Profil");
-        nume = new JLabel("Nume: " + c.getNume());
+        String[] numes = c.toString().split(" ");
+        nume = new JLabel("Nume: " + numes[0]);
         materii = new JTextArea(c.getMaterii().toString().replace(", ", "\n       ").replace("]", ""));
         materii.disable();
         if (c instanceof Profesor)
@@ -20,7 +21,7 @@ public class VeziProfilFrame extends JFrame implements ScriereCitire {
         materii.setBackground(getBackground());
         materii.setFont(nume.getFont());
         cancel = new JButton("Inchide");
-        prenume = new JLabel("Prenume: " + c.getPrenume());
+        prenume = new JLabel("Prenume: " + numes[1]);
         poza = new JLabel(new ImageIcon(c.getPoza()));
         cancel.addActionListener(e -> dispose());
         poza.setBounds(60, 40, 70, 70);

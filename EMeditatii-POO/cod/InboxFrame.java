@@ -17,7 +17,7 @@ public class InboxFrame extends JFrame implements ScriereCitire {
     private final String path = "conturi\\id\\inbox";
     private String cale,id,nume;
 
-    InboxFrame(String id, String nume) {
+    public InboxFrame(String id, String nume) {
         super("Mesaje");
         this.id=id;
         this.nume=nume;

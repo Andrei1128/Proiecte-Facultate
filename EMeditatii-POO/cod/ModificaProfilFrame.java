@@ -23,7 +23,7 @@ public class ModificaProfilFrame extends JFrame implements ScriereCitire {
     private Cont p;
     private Persoana c;
 
-    ModificaProfilFrame(Cont p, MainFrame m) {
+    public ModificaProfilFrame(Cont p, MainFrame m) {
         super("Modifica Profil");
         this.p = p;
         c = p.getPersoana();
@@ -31,8 +31,9 @@ public class ModificaProfilFrame extends JFrame implements ScriereCitire {
         this.m = m;
         submit = new JButton("Salveaza");
         cancel = new JButton("Inapoi");
-        nume = new JTextField(c.getNume(), 18);
-        prenume = new JTextField(c.getPrenume(), 16);
+        String[] numes = p.getPersoana().toString().split(" ");
+        nume = new JTextField(numes[0], 18);
+        prenume = new JTextField(numes[1], 16);
         numel = new JLabel("Nume:");
         prenumel = new JLabel("Prenume :");
         adaugaMaterie = new JButton("Adauga materie preferata");

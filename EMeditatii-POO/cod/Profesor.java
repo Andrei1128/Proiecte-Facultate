@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Profesor extends Persoana {
      private ArrayList<Certificat> certificate;
 
-    Profesor(String nume, String prenume) {
+    public Profesor(String nume, String prenume) {
         super(nume, prenume);
         certificate = new ArrayList<>();
     }

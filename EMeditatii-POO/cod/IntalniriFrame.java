@@ -16,7 +16,7 @@ public class IntalniriFrame extends JFrame implements ScriereCitire{
     private final String path = "conturi\\id\\intalniri";
     private String cale,id,nume;
 
-    IntalniriFrame(String id, String nume) {
+    public IntalniriFrame(String id, String nume) {
         super("Intalniri");
         this.id=id;
         this.nume=nume;

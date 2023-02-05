@@ -6,7 +6,7 @@ public class Certificat implements Serializable {
     private String titlu;
     private String cale;
 
-    Certificat(String titlu, String cale) {
+    public Certificat(String titlu, String cale) {
         this.titlu = titlu;
         this.cale = cale;
     }

@@ -8,7 +8,7 @@ public class Cont implements Serializable {
     private String id;
     private char[] pw;
 
-    Cont(Persoana p, String id, char[] pw) {
+    public Cont(Persoana p, String id, char[] pw) {
         this.p = p;
         this.id = id;
         this.pw = pw;

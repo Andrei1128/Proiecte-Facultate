@@ -13,8 +13,9 @@ public class MainFrame extends JFrame {
     protected JMenuBar toolBar;
     private Cont p;
     private MainFrame main;
+    private String[] numes;
 
-    MainFrame(Cont p) {
+    public MainFrame(Cont p) {
         super("E-Meditatii");
         this.p = p;
         main = this;
@@ -28,8 +29,9 @@ public class MainFrame extends JFrame {
         jprofil = new JMenu("Profil");
         programari = new JMenuItem("Vezi");
         exit = new JButton("Iesire");
-        nume = new JLabel(persoana.getNume());
-        prenume = new JLabel(persoana.getPrenume());
+        numes = persoana.toString().split(" ");
+        nume = new JLabel(numes[0]);
+        prenume = new JLabel(numes[1]);
         poza = new JLabel(new ImageIcon(p.getPersoana().getPoza()));
         poza.setBounds(50, 30, 70, 70);
         add(poza);
@@ -78,7 +80,7 @@ public class MainFrame extends JFrame {
                 new LogInFrame();
             } else if (e.getSource() == inbox) {
                 if (mesaje == null || !mesaje.isVisible())
-                    mesaje = new InboxFrame(p.getId(), p.getPersoana().getNumePrenume());
+                    mesaje = new InboxFrame(p.getId(), p.getPersoana().toString());
                 mesaje.toFront();
             } else if (e.getSource() == veziProfil) {
                 if (veziprofil == null || !veziprofil.isVisible())
@@ -93,7 +95,7 @@ public class MainFrame extends JFrame {
                 modificaFrame.toFront();
             } else if (e.getSource() == programari) {
                 if (intalniri == null || !intalniri.isVisible())
-                    intalniri = new IntalniriFrame(p.getId(), p.getPersoana().getNumePrenume());
+                    intalniri = new IntalniriFrame(p.getId(), p.getPersoana().toString());
                 intalniri.toFront();
             } else if (e.getSource() == exit)
                 System.exit(0);
@@ -102,8 +104,8 @@ public class MainFrame extends JFrame {
     }
 
     public void setInfo() {
-        nume.setText(persoana.getNume());
-        prenume.setText(persoana.getPrenume());
+        nume.setText(numes[0]);
+        prenume.setText(numes[1]);
         ImageIcon icon = new ImageIcon(persoana.getPoza());
         icon.getImage().flush();
         poza.setIcon(icon);

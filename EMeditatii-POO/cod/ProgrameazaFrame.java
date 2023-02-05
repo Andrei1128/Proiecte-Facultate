@@ -10,7 +10,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
-public class ProgrameazaFrame extends JFrame {
+public class ProgrameazaFrame extends JFrame implements ScriereCitire {
     private JComboBox<String> materie, profesor;
     private JTextField ora, data, loc, pret;
     private JLabel oral, datal, locl, pretl, materiel, profesorl;
@@ -20,7 +20,7 @@ public class ProgrameazaFrame extends JFrame {
     private String[] s;
     private String id, nume;
 
-    ProgrameazaFrame(String id, String nume) {
+    public ProgrameazaFrame(String id, String nume) {
         super("Programeaza intalnire");
         this.id = id;
         this.nume = nume;
@@ -103,7 +103,7 @@ public class ProgrameazaFrame extends JFrame {
                                 new Intalnire((String) materie.getSelectedItem(), Data,
                                         loc.getText(),
                                         pret.getText(), id, s[profesor.getSelectedIndex() * 2]));
-                        m.trimite(s[profesor.getSelectedIndex() * 2]);
+                        scrie(s[profesor.getSelectedIndex() * 2], m, 0);
                         dispose();
                     } else
                         JOptionPane.showMessageDialog(null, "Date introduse incorect!",

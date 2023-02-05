@@ -18,10 +18,10 @@ public class PrintReviews implements ScriereCitire {
             }
         }
     }
-    public class ArrayListPrintable implements Printable {
+    private class ArrayListPrintable implements Printable {
         private ArrayList<Recenzie> list;
 
-        public ArrayListPrintable(ArrayList<Recenzie> list) {
+        private ArrayListPrintable(ArrayList<Recenzie> list) {
             this.list = list;
         }
 

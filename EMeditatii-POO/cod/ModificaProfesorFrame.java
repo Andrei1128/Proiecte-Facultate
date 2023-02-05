@@ -10,7 +10,6 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 public class ModificaProfesorFrame extends ModificaProfilFrame {
     private Cont p;
     private JButton adaugaCert;
-    private String s2;
 
     public ModificaProfesorFrame(Cont p, MainFrame m) {
         super(p, m);
@@ -25,6 +24,7 @@ public class ModificaProfesorFrame extends ModificaProfilFrame {
     }
 
     private class AscultatorB implements ActionListener {
+        private String s2;
         public void actionPerformed(ActionEvent e) {
             if (e.getSource() == adaugaMaterie) {
                 JComboBox comboBox = new JComboBox(Materii.materii);

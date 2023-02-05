@@ -95,4 +95,8 @@ public class LogInFrame extends JFrame implements ScriereCitire {
             }
         }
     }
+
+    public static void main(String[] args) {
+        new LogInFrame();
+    }
 }
